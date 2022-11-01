@@ -3,8 +3,7 @@ myhook() {
     command=$history[$len]
     trigger='git push'
     if [[ "$command" == *"$trigger"* ]]; then
-        echo "It's there."
-        echo $command
+        python3 play.py
     fi
 }
 precmd_functions+=(myhook)
